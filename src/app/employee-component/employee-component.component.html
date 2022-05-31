@@ -1,0 +1,31 @@
+<div class="container">
+    <h3 class="text-info">Employee Details</h3>
+    <button type="button" class="btn  btn-info" (click)="onClickAdd()">Add Employee</button>
+    
+    <hr style="color: red;border:2px solid red;">
+    <table class="table table-hover">
+        <thead class="text-justified text-center table-info">
+            <tr>
+                <th>Employee Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.id}}</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.gender}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.salary}}</td>
+                <td>
+                    <a href="delete/{{emp.id}}">Delete</a> | <a href="update/{{emp.id}}">Update</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr style="color: red;border:2px solid red;">
+</div>
